@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Date?</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffecd2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff6f61;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #yesBtn {
+            background-color: #6fdc6f;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #ff5959;
+            color: white;
+            position: relative;
+        }
+
+        #message {
+            display: none;
+            font-size: 24px;
+            margin-top: 30px;
+            color: #ff6f61;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Would you like to go for a coffee with me? ☕️</h1>
+    <div class="buttons">
+        <button id="yesBtn">Yes 💖</button>
+        <button id="noBtn">No 😞</button>
+    </div>
+    <h1>Do you like me? 😊</h1>
+    <div class="buttons">
+        <button id="noLikeBtn">No 😞</button>
+    </div>
+    <div id="message">Thank you, cutie! 😘 Meet me tomorrow at 7pm! 🥰</div>
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+        const message = document.getElementById('message');
+        const noLikeBtn = document.getElementById('noLikeBtn');
+
+        // Moving 'No' button away on hover
+        noBtn.addEventListener('mouseover', function() {
+            const randomX = Math.random() * window.innerWidth / 2;
+            const randomY = Math.random() * window.innerHeight / 2;
+            noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        });
+
+        // Show message on clicking 'Yes'
+        yesBtn.addEventListener('click', function() {
+            message.style.display = 'block';
+        });
+
+        // Change 'No' button to 'Yes' when hovered
+        noLikeBtn.addEventListener('mouseover', function() {
+            noLikeBtn.innerText = "Yes 💖";
+            noLikeBtn.style.backgroundColor = "#6fdc6f";
+        });
+    </script>
+
+</body>
+</html>
+

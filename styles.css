@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #87CEEB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#game-container {
+  text-align: center;
+  position: relative;
+}
+
+#balloon-container {
+  width: 400px;
+  height: 600px;
+  background-color: #fff;
+  border: 2px solid #000;
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.balloon {
+  width: 50px;
+  height: 70px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: red;
+  cursor: pointer;
+}
+
+#start-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#start-btn:hover {
+  background-color: #45a049;
+}
+
+
